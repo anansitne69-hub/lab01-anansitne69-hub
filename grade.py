@@ -1,15 +1,21 @@
+def to_grade(score):
+    if score >= 80:
+        return "A"
+    elif score >= 70:
+        return "B"
+    elif score >= 60:
+        return "C"
+    elif score >= 50:
+        return "D"
+    else:
+        return "F"
+
+
 def average(scores):
-    if len(scores) == 0:
-        return 0
-
-    for score in scores:
-        if score < 0 or score > 100:
-            return 0
-
-    result = sum(scores) / len(scores)
-
-    return round(result, 2)
+    return sum(scores) / len(scores)
 
 
-scores = [70, 80, 90]
-print("Average:", average(scores))
+if __name__ == "__main__":
+    scores = [85, 72, 64, 91]
+    print("Average:", average(scores))
+    print("Grade:", to_grade(average(scores)))
