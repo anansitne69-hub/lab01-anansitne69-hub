@@ -3,3 +3,6 @@ def average(scores):
 
 scores = [70, 80, 90]
 print("Average:", average(scores))
+
+def is_pass(score):
+    return score >= 50
